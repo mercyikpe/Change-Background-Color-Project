@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random Background color every 1 minute</title>
+    <style type="text/css">
+      body {
+        margin: 0;
+      }
+      button {
+        padding: 10px 40px;
+        border: 3px solid #1b1fee;
+        background: #fff;
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body class="randomBackground" id="randomBackground">
+
+      <script>
+
+      // selects random background
+      setInterval(function() {
+        const red = Math.round(Math.random() * 255);
+        const green = Math.round(Math.random() * 255);
+        const blue = Math.round(Math.random() * 255);
+
+        let bg = "background: rgb(" + red + ", " + green + ", " + blue + ");";
+        let selectElement = document.getElementById("randomBackground");
+
+        selectElement.style = bg;
+      }, 2000);
+
+    </script>
+  </body>
+</html>
